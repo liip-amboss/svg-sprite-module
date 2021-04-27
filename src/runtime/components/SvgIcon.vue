@@ -1,5 +1,11 @@
 <template>
-  <svg :view-box="viewBox" :class="svgClass">
+  <svg 
+    :view-box="viewBox" 
+    :class="svgClass"
+    :aria-hidden="ariaHidden"
+    :focusable="focusable"
+    :role="role"
+  >
     <title v-if="title">{{ title }}</title>
     <desc v-if="desc">{{ desc }}</desc>
     <use :href="icon.url" />
@@ -29,7 +35,22 @@ export default {
           return !isNaN(parseInt(v))
         })
       }
-    }
+    },
+    ariaHidden: {
+      type: Boolean,
+      require: false,
+      default: true,
+    },
+    focusable: {
+      type: Boolean,
+      require: false,
+      default: false,
+    },
+    role: {
+      type: String,
+      require: false,
+      default: 'img',
+    },
   },
   data () {
     return {

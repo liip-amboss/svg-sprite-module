@@ -85,6 +85,9 @@ export default {
 | name | icon path with format `SPRITE_NAME/ICON_NAME`, `SPRITE_NAME` can be omitted for default sprite  |
 | title | Accessibility title for icon, this props will transform to `<title>` tag inside `<svg>` |
 | desc | Accessibility description for icon, this props will transform to `<desc>` tag inside `<svg>` |
+| ariaHidden | Accessibility aria-hidden attribute, either `true` (default) or `false` |
+| focusable | Disable/enable focusable attribute. Default is `false` |
+| role | Add role="img" to the SVG tag |
 
 ## Integrations
 ### Storybook
